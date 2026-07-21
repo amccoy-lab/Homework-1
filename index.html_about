@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Armani McCoy</title>
+</head>
+
+<body>
+
+<header>
+
+<h1>About Me</h1>
+
+<nav>
+    <a href="index.html">Home</a> |
+    <a href="projects.html">Projects</a> |
+    <a href="about.html">About</a>
+</nav>
+
+</header>
+
+<main>
+
+<section>
+
+<h2>Biography</h2>
+
+<p>
+I am a college student from Philadelphia pursuing an associate degree while
+building my skills in web development and technology.
+</p>
+
+</section>
+
+<section>
+
+<h2>Contact</h2>
+
+<h3>Get in Touch</h3>
+
+<ul>
+    <li>Email: armanimccoy69@gmail.com</li>
+    <li>GitHub: github.com/amccoy-lab</li>
+
+</ul>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>&copy; 2026 Armani McCoy</p>
+
+</footer>
+
+</body>
+</html>
