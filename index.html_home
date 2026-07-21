@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Armani McCoy</title>
+</head>
+
+<body>
+
+<header>
+    <h1>Armani McCoy Portfolio</h1>
+
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="projects.html">Projects</a> |
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<main>
+
+<section>
+
+<h2>Welcome</h2>
+
+<p>
+Welcome to my personal portfolio website. This site highlights my projects,
+career goals, and information about me.
+</p>
+
+</section>
+
+<section>
+
+<h2>Featured Work</h2>
+
+<article>
+
+<h3>Web Development</h3>
+
+<p>
+Project information will be added here.
+</p>
+
+</article>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>&copy; 2026 Armani McCoy</p>
+
+</footer>
+
+</body>
+</html>
