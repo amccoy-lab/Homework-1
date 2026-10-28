@@ -1,195 +1,219 @@
-/* =====================
-   GLOBAL STYLES
-   ===================== */
-
+/* Applies to every element */
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    background: linear-gradient(to bottom, #fff1f7, #f7efff);
-    color: #4b365f;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    overflow-x: hidden;
+    color: #352044;
+    background: #fff5fc;
 }
 
-/* TYPE SELECTORS */
-
-h1, h2, h3 {
-    font-family: "Playfair Display", serif;
-}
-
-p {
-    margin-top: 8px;
-}
-
-img {
-    width: 100%;
-    max-width: 600px;
-    display: block;
-    border-radius: 16px;
-
-}
-
-/* ID SELECTORS */
-
+/* Header and navigation */
 #header {
-    background: linear-gradient(135deg, #ff8ac6, #c77dff);
-    color: black;
+    background: linear-gradient(135deg, #7b2cbf, #c77dff);
+    color: white;
     text-align: center;
-    padding: 40px;
-    border-bottom: 8px solid #72efdd;
+    padding: 25px 15px;
 }
 
-#footer {
-    background: linear-gradient(135deg, #c77dff, #ff8ac6);
-    color: black;
-    text-align: center;
-    padding: 24px;
-    border-top: 8px solid #72efdd;
+#header h1 {
+    margin: 0 0 15px;
+    overflow-wrap: anywhere;
 }
 
-/* CLASS SELECTORS */
-
-.content-box {
-    background-color: white;
-    margin: 32px;
-    padding: 24px;
-    border: 3px solid #ff8ac6;
-    border-radius: 24px;
-    box-shadow: 0 4px 12px rgba(0,0,0,.1);
-}
-
-.card {
-    background-color: #fff7fc;
-    padding: 24px;
-    border: 2px solid #c77dff;
-    border-radius: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.08);
-}
-
-/* =====================
-   NAVIGATION
-   ===================== */
-
-nav ul {
-    list-style: none;
-    margin-top: 16px;
-}
-
-nav li {
-    display: inline-block;
-    margin: 0 8px;
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 25px;
 }
 
 nav a {
+    color: white;
     text-decoration: none;
-    color: black;
-    font-weight: 600;
-    padding: 8px 16px;
-    border-radius: 24px;
-    transition: 0.3s;
+    font-weight: bold;
+    padding: 5px;
 }
 
-nav a:hover {
-    background-color: rgba(255,255,255,.25);
+nav a:hover,
+nav a:focus {
+    color: #ffe0f3;
+    text-decoration: underline;
 }
 
-/* =====================
-   FLEXBOX LAYOUT
-   ===================== */
-
-#goals {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
+/* Main page layout */
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
 }
 
-#goals .card {
-    flex: 1 1 300px;
+/* Sections */
+.content-box {
+    min-width: 0;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #e6b8f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(91, 33, 120, 0.08);
 }
 
-/* =====================
-   HOBBIES
-   ===================== */
+.content-box h2 {
+    margin-top: 0;
+    color: #7626a8;
+}
 
+.content-box p,
+.content-box li {
+    overflow-wrap: anywhere;
+}
+
+/* About section */
+#about {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+
+.about-text {
+    min-width: 0;
+}
+
+.welcome-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Goals cards */
+.goals-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+}
+
+.card {
+    min-width: 0;
+    padding: 18px;
+    background-color: #fff0fa;
+    border: 1px solid #e6b8f5;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #8a2be2;
+}
+
+/* Hobbies list */
 #hobbies ul {
-    padding-left: 24px;
-    margin-top: 16px;
+    padding-left: 25px;
+    margin-bottom: 0;
 }
 
 #hobbies li {
     margin-bottom: 8px;
 }
 
-/* =====================
-   IMAGE STYLING
-   ===================== */
-
-#about img {
-    margin-top: 24px;
-    border: 4px solid #72efdd;
+/* Footer */
+#footer {
+    background-color: #6a1b9a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
 }
 
-/* =====================
-   DESKTOP CONTAINER
-   ===================== */
-
-main {
-    max-width: 1200px;
-    margin: 0 auto;
+#footer p {
+    margin: 0;
 }
 
-/* =====================
-   TABLET
-   768px
-   ===================== */
+/* Tablet: 768px and wider */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;
+    }
 
-@media (max-width: 768px) {
+    #about {
+        grid-column: 1 / -1;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+    }
+
+    #goals,
+    #hobbies {
+        height: 100%;
+    }
+
+    .goals-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #footer {
+        margin-top: 15px;
+    }
+}
+
+/* Desktop: 1200px and wider */
+@media (min-width: 1200px) {
+    main {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
+        padding: 30px 20px;
+    }
+
+    #about {
+        grid-column: 1 / -1;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    }
+
+    #goals,
+    #hobbies {
+        grid-column: auto;
+    }
+
+    .goals-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* Small phones */
+@media (max-width: 360px) {
+    main {
+        padding: 10px;
+        gap: 12px;
+    }
 
     .content-box {
-        margin: 24px 16px;
+        padding: 14px;
     }
-
-    #goals {
-        flex-direction: column;
-    }
-
-    nav li {
-        display: block;
-        margin: 8px 0;
-    }
-}
-
-/* =====================
-   MOBILE
-   320px+
-   ===================== */
-
-@media (max-width: 480px) {
 
     #header {
-        padding: 24px 16px;
+        padding: 20px 10px;
     }
 
-    h1 {
-        font-size: 2rem;
+    nav {
+        gap: 8px 12px;
     }
 
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    .content-box {
-        margin: 16px 8px;
-        padding: 16px;
-    }
-
-    nav li {
-        display: block;
-        margin: 8px 0;
+    .card {
+        padding: 12px;
     }
 }

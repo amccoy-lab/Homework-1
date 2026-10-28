@@ -3,52 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Welcome - Armani McCoy</title>
+    <title>Welcome - Armani McCoy</title>
     <link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
 
     <header id="header">
         <h1>Welcome to My Website</h1>
-        <nav>
-    <a href="index.html">Home</a> |
-    <a href="project.html">Project</a> |
-    <a href="about.html">About</a>
-</nav>
+
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="project.html">Project</a>
+            <a href="about.html">About</a>
+        </nav>
     </header>
 
     <main>
-
         <section id="about" class="content-box">
-            <h2>More on Ms. McCoy</h2>
-            <p>
-                Hello my name is Armani McCoy. I am from Philadelphia and I am currently
-                attending college while working toward my associate degree in Information Technology. I enjoy
-                learning new technology skills and improving my web development knowledge.
-            </p>
+            <div class="about-text">
+                <h2>More on Ms. McCoy</h2>
+                <p>
+                    Hello, my name is Armani McCoy. I am from Philadelphia and I am
+                    currently attending college while working toward my associate
+                    degree in Information Technology. I enjoy learning new technology
+                    skills and improving my web development knowledge.
+                </p>
+            </div>
 
-            <img welcome 2 src="welcome 2.jpg" alt="Welcome Image 2">
-
+            <img
+                src="welcome 2.jpg"
+                alt="A laptop, notebook, and plant arranged on a pink desk"
+                class="welcome-image"
+            >
         </section>
 
         <section id="goals" class="content-box">
             <h2>My Goals</h2>
 
-            <article class="card">
-                <h3>Education</h3>
-                <p>
-                    My goal is to complete my associate degree and continue building
-                    skills in web development, technology, and digital media.
-                </p>
-            </article>
+            <div class="goals-grid">
+                <article class="card">
+                    <h3>Education</h3>
+                    <p>
+                        My goal is to complete my associate degree and continue building
+                        skills in web development, technology, and digital media.
+                    </p>
+                </article>
 
-            <article class="card">
-                <h3>Career</h3>
-                <p>
-                    I want to build a successful career where I can use technology to
-                    solve problems and continue learning new programming skills.
-                </p>
-            </article>
+                <article class="card">
+                    <h3>Career</h3>
+                    <p>
+                        I want to build a successful career where I can use technology
+                        to solve problems and continue learning new programming skills.
+                    </p>
+                </article>
+            </div>
         </section>
 
         <section id="hobbies" class="content-box">
@@ -61,7 +69,6 @@
                 <li>Spending time with family and friends</li>
             </ul>
         </section>
-
     </main>
 
     <footer id="footer">
