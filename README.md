@@ -68,3 +68,16 @@ I updated my color palette to improve readability. I will verify that normal tex
 Milestone 3 helped me understand the importance of accessibility and intentional visual design. I learned how semantic HTML, accessible forms, responsive layouts, and Gestalt principles can improve the experience for people visiting my website.
 
 My goal is to continue improving my web development skills and creating websites that are visually appealing and accessible to different users.
+### Accessibility Testing Results
+
+I tested all three pages of my portfolio website using the WAVE Accessibility Checker on November 11, 2026.
+
+- **Home Page:** 0 accessibility errors and 0 contrast errors.
+- **Projects Page:** 0 accessibility errors and 0 contrast errors.
+- **About Page:** 0 accessibility errors and 0 contrast errors.
+
+I improved accessibility by adding skip navigation links, descriptive image alt text, proper form labels, keyboard focus indicators, and accessible error messages.
+
+I also applied the Gestalt principles of proximity and similarity while maintaining a consistent pink and purple color palette across my website.
+
+These improvements helped me create a website that is more organized, readable, and accessible to visitors.
