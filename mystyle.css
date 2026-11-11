@@ -3,24 +3,30 @@
    GLOBAL STYLES
    ===================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
+    margin: 0;
     font-family: "Poppins", sans-serif;
     background: linear-gradient(to bottom, #fff1f7, #f7efff);
-    color: #4b365f;
+    color: #342044;
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-wrap: break-word;
 }
 
 /* TYPE SELECTORS */
 
 h1, h2, h3 {
     font-family: "Playfair Display", serif;
+    line-height: 1.3;
 }
 
 p {
@@ -30,94 +36,154 @@ p {
 img {
     width: 100%;
     max-width: 600px;
+    height: auto;
     display: block;
     border-radius: 16px;
 }
 
-/* ID SELECTORS */
+a {
+    color: #602080;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =====================
+   KEYBOARD ACCESSIBILITY
+   ===================== */
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    z-index: 1000;
+    background: white;
+    color: #342044;
+    padding: 12px 16px;
+    border: 2px solid #602080;
+    border-radius: 8px;
+}
+
+.skip-link:focus {
+    top: 8px;
+}
+
+:focus-visible {
+    outline: 3px solid #342044;
+    outline-offset: 4px;
+}
+
+/* =====================
+   HEADER AND FOOTER
+   ===================== */
 
 #header {
     background: linear-gradient(135deg, #ff8ac6, #c77dff);
-    color: black;
+    color: #171020;
     text-align: center;
-    padding: 40px;
+    padding: 40px 24px;
     border-bottom: 8px solid #72efdd;
 }
 
 #footer {
     background: linear-gradient(135deg, #c77dff, #ff8ac6);
-    color: black;
+    color: #171020;
     text-align: center;
     padding: 24px;
     border-top: 8px solid #72efdd;
-}
-
-/* CLASS SELECTORS */
-
-.content-box {
-    background-color: white;
-    margin: 32px;
-    padding: 24px;
-    border: 3px solid #ff8ac6;
-    border-radius: 24px;
-    box-shadow: 0 4px 12px rgba(0,0,0,.1);
-}
-
-.card {
-    background-color: #fff7fc;
-    padding: 24px;
-    border: 2px solid #c77dff;
-    border-radius: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
 
 /* =====================
    NAVIGATION
    ===================== */
 
-nav ul {
-    list-style: none;
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
     margin-top: 16px;
 }
 
-nav li {
-    display: inline-block;
-    margin: 0 8px;
-}
-
 nav a {
+    display: inline-block;
     text-decoration: none;
-    color: black;
+    color: #171020;
     font-weight: 600;
     padding: 8px 16px;
     border-radius: 24px;
-    transition: 0.3s;
 }
 
-nav a:hover {
-    background-color: rgba(255,255,255,.25);
+nav a:hover,
+nav a:focus-visible {
+    background-color: #ffffff;
+    color: #342044;
+}
+
+nav a[aria-current="page"] {
+    background-color: #ffffff;
+    color: #342044;
+    text-decoration: underline;
 }
 
 /* =====================
-   FLEXBOX LAYOUT
+   MAIN CONTENT
    ===================== */
 
-#goals {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
+main {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-#goals .card {
-    flex: 1 1 300px;
+.content-box {
+    background-color: #ffffff;
+    margin: 32px;
+    padding: 24px;
+    border: 3px solid #b34785;
+    border-radius: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
 }
 
-/* GOALS GRID */
+.content-box h2 {
+    margin-bottom: 16px;
+}
+
+/* =====================
+   GESTALT: SIMILARITY
+   ===================== */
+
+.card {
+    background-color: #fff7fc;
+    padding: 24px;
+    border: 2px solid #8750b5;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+}
+
+.card h3 {
+    color: #51236b;
+    margin-top: 0;
+}
+
+.card p {
+    margin-bottom: 0;
+}
+
+/* =====================
+   GESTALT: PROXIMITY
+   ===================== */
 
 .goals-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
+}
+
+#goals .card {
+    width: 100%;
 }
 
 /* =====================
@@ -137,31 +203,120 @@ nav a:hover {
    IMAGE STYLING
    ===================== */
 
-#about img {
+#about img,
+.portfolio-image {
     margin-top: 24px;
-    border: 4px solid #72efdd;
+    border: 4px solid #479a8e;
 }
 
 /* =====================
-   DESKTOP CONTAINER
+   ACCESSIBLE CONTACT FORM
    ===================== */
 
-main {
-    max-width: 1200px;
-    margin: 0 auto;
+.contact-form {
+    max-width: 700px;
+    margin: 24px auto;
+}
+
+.contact-form fieldset {
+    border: 2px solid #8750b5;
+    border-radius: 16px;
+    padding: 24px;
+    min-width: 0;
+}
+
+.contact-form legend {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #342044;
+    padding: 0 8px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #342044;
+}
+
+.form-group input,
+.form-group textarea {
+    display: block;
     width: 100%;
+    padding: 12px;
+    border: 2px solid #8750b5;
+    border-radius: 8px;
+    font: inherit;
+    color: #342044;
+    background-color: #ffffff;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+    outline: 3px solid #342044;
+    outline-offset: 2px;
+}
+
+.form-group input[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+    border: 3px solid #a11232;
+}
+
+.error-message {
+    color: #a11232;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.form-status {
+    margin-top: 16px;
+    font-weight: 600;
+}
+
+.form-status.error {
+    color: #a11232;
+}
+
+.form-status.success {
+    color: #245d39;
+}
+
+.submit-button {
+    background-color: #602080;
+    color: #ffffff;
+    border: 2px solid #602080;
+    padding: 12px 24px;
+    border-radius: 24px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #44135e;
+}
+
+.submit-button:focus-visible {
+    outline: 3px solid #342044;
+    outline-offset: 4px;
 }
 
 /* =====================
-   LARGE TABLET
-   1024px
+   LARGE TABLET: 1024px
    ===================== */
 
 @media (max-width: 1024px) {
-
-    .goals-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
     .content-box {
         margin: 24px;
@@ -170,8 +325,7 @@ main {
 }
 
 /* =====================
-   SMALL TABLET
-   768px
+   TABLET: 768px
    ===================== */
 
 @media (max-width: 768px) {
@@ -180,43 +334,43 @@ main {
         margin: 24px 16px;
     }
 
-    #goals {
-        flex-direction: column;
+    .goals-grid {
+        grid-template-columns: 1fr;
     }
 
-    nav li {
-        display: inline-block;
-        margin: 8px 4px;
+    #header {
+        padding: 32px 16px;
     }
 
 }
 
 /* =====================
-   MOBILE
-   640px
+   MOBILE: 640px
    ===================== */
 
 @media (max-width: 640px) {
-
-    .goals-grid {
-        grid-template-columns: 1fr;
-    }
 
     .content-box {
         margin: 16px;
         padding: 16px;
     }
 
-    nav li {
-        display: block;
-        margin: 8px 0;
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+    }
+
+    .contact-form fieldset {
+        padding: 16px;
     }
 
 }
 
 /* =====================
-   SMALL MOBILE
-   320px+
+   SMALL MOBILE: 320px+
    ===================== */
 
 @media (max-width: 480px) {
@@ -240,6 +394,23 @@ main {
 
     .card {
         padding: 16px;
+    }
+
+    nav a {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+}
+
+/* =====================
+   REDUCED MOTION
+   ===================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
     }
 
 }
