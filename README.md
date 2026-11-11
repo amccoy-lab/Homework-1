@@ -19,7 +19,47 @@
 3. I styled my navigation links to clearly identify the current page.
 4. I added responsive layouts to improve accessibility on mobile phones, tablets, and desktop computers.
 5. I created form styles with clearly labeled input fields and visible error messages.
-6. I added reduced-motion support to respect users who prefer less animation.
+6. ## Milestone 3: Accessibility and Visual Design
+
+### Accessibility Improvements
+
+1. I added a skip navigation link so keyboard users can move directly to the main content.
+2. I added `aria-current="page"` to identify the active navigation link.
+3. I used proper labels for every contact form input so screen readers can identify each field.
+4. I added a fieldset and legend to group the contact information.
+5. I added JavaScript validation to display clear error messages when required fields are missing or incorrect.
+6. I used `aria-invalid` and `aria-live` to make form errors easier for screen-reader users to identify.
+7. I updated the CSS to improve text readability and provide visible keyboard focus indicators.
+8. I added responsive styling to make the website easier to use on phones, tablets, and desktop computers.
+
+### Gestalt Principles
+
+**Proximity:** I grouped related information into sections and cards so visitors can easily understand which content belongs together.
+
+**Similarity:** I used the same pink and purple color palette, fonts, navigation, rounded borders, and card styles throughout my website.
+
+### Accessible Contact Form
+
+I added a contact form to my About page that includes fields for a full name, email address, and message. Each field has a visible label and an accessible error message. I also used a fieldset and legend to organize the form. JavaScript checks the information before showing a validation result. This form is a demonstration and does not send messages.
+
+### Accessibility Testing
+
+I will test all three pages using WAVE and check the text and background colors using the WebAIM Contrast Checker. I will document any additional errors and fixes after testing.
+7. I added reduced-motion support to respect users who prefer less animation.
+### Projects Page Accessibility Improvements
+
+1. I added a skip navigation link to help keyboard users access the main content without going through every navigation link.
+2. I added `aria-current="page"` to identify the Projects page as the active page.
+3. I used semantic HTML elements such as `main`, `section`, and `article` to organize the page.
+4. I added `aria-labelledby` to connect the Projects section with its heading.
+5. I improved the project descriptions to make the content more meaningful and easier to understand.
+6. I used responsive CSS Grid to organize the project cards on different screen sizes.
+
+### Gestalt Principles Used
+
+**Proximity:** I placed each project title and description inside the same card to show that they belong together.
+
+**Similarity:** I used matching pink backgrounds, purple borders, rounded corners, and consistent spacing across all project cards.
 
 ### Gestalt Principles
 
