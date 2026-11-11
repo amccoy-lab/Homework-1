@@ -1,63 +1,180 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>About Me - My Portfolio</title>
-<link rel="stylesheet" href="mystyle.css">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About Me - Armani McCoy Portfolio</title>
+    <link rel="stylesheet" href="mystyle.css">
 </head>
 
 <body>
 
+<a class="skip-link" href="#main-content">
+    Skip to main content
+</a>
+
 <header id="header">
 
-<h1>About Me</h1>
+    <h1>About Me</h1>
 
-<nav aria-label="Main navigation">
-    <a href="index.html">Home</a> |
-    <a href="project.html">Project</a> |
-    <a href="about.html">About</a>
-</nav>
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="project.html">Projects</a>
+        <a href="about.html" aria-current="page">About</a>
+    </nav>
 
 </header>
 
-<main>
+<main id="main-content">
 
-<section>
+    <section class="content-box">
 
-<h2>Biography</h2>
+        <h2>Biography</h2>
 
-<p>
-I am a college student from Philadelphia pursuing an associate degree while
-building my skills in web development and technology.
-</p>
+        <p>
+            I am a college student from Philadelphia
+            pursuing an associate degree in
+            Information Technology while building
+            my skills in web development and technology.
+        </p>
 
-</section>
+    </section>
 
-<section>
+    <section class="content-box">
 
-<h2>Contact</h2>
+        <h2>Contact</h2>
 
-<h3>Get in Touch</h3>
+        <h3>Get in Touch</h3>
 
-<ul>
-    <li>Email: armanimccoy69@gmail.com</li>
-   <li>GitHub:
-    <a href="https://github.com/amccoy-lab">My GitHub Portfolio</a>
-</li>
+        <p>
+            Feel free to contact me or visit my
+            GitHub portfolio to see my projects.
+        </p>
 
-</ul>
+        <ul>
+            <li>
+                Email:
+                <a href="mailto:armanimccoy69@gmail.com">
+                    armanimccoy69@gmail.com
+                </a>
+            </li>
 
-</section>
+            <li>
+                GitHub:
+                <a href="https://github.com/amccoy-lab">
+                    My GitHub Portfolio
+                </a>
+            </li>
+        </ul>
+
+    </section>
+
+    <section class="content-box">
+
+        <h2>Contact Form</h2>
+
+        <p>
+            Please complete the form below.
+            All fields are required.
+        </p>
+
+        <form id="contact-form"
+              class="contact-form"
+              novalidate>
+
+            <fieldset>
+
+                <legend>Your Contact Information</legend>
+
+                <div class="form-group">
+
+                    <label for="full-name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="full-name"
+                        autocomplete="name"
+                        required
+                        aria-describedby="name-error"
+                    >
+
+                    <p id="name-error"
+                       class="error-message"
+                       aria-live="polite"></p>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        required
+                        aria-describedby="email-error"
+                    >
+
+                    <p id="email-error"
+                       class="error-message"
+                       aria-live="polite"></p>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Your Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        required
+                        aria-describedby="message-error"
+                    ></textarea>
+
+                    <p id="message-error"
+                       class="error-message"
+                       aria-live="polite"></p>
+
+                </div>
+
+            </fieldset>
+
+            <button type="submit"
+                    class="submit-button">
+                Submit Message
+            </button>
+
+            <p id="form-status"
+               class="form-status"
+               role="status"
+               aria-live="polite"></p>
+
+        </form>
+
+    </section>
 
 </main>
 
 <footer id="footer">
-
-<p>&copy; 2026 Armani McCoy</p>
-
+    <p>&copy; 2026 Armani McCoy</p>
 </footer>
+
+<script src="contact.js"></script>
 
 </body>
 </html>
