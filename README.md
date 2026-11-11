@@ -46,6 +46,20 @@ I added a contact form to my About page that includes fields for a full name, em
 
 I will test all three pages using WAVE and check the text and background colors using the WebAIM Contrast Checker. I will document any additional errors and fixes after testing.
 7. I added reduced-motion support to respect users who prefer less animation.
+### Projects Page Accessibility Improvements
+
+1. I added a skip navigation link to help keyboard users access the main content without going through every navigation link.
+2. I added `aria-current="page"` to identify the Projects page as the active page.
+3. I used semantic HTML elements such as `main`, `section`, and `article` to organize the page.
+4. I added `aria-labelledby` to connect the Projects section with its heading.
+5. I improved the project descriptions to make the content more meaningful and easier to understand.
+6. I used responsive CSS Grid to organize the project cards on different screen sizes.
+
+### Gestalt Principles Used
+
+**Proximity:** I placed each project title and description inside the same card to show that they belong together.
+
+**Similarity:** I used matching pink backgrounds, purple borders, rounded corners, and consistent spacing across all project cards.
 
 ### Gestalt Principles
 
