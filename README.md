@@ -1,68 +1,70 @@
-## Milestone 3: Accessibility and Visual Design
+# Armani McCoy – Portfolio Website
 
-### Accessibility Improvements
+## Web Development Milestone 3: Accessibility and Visual Design
 
-1. I added a skip navigation link to help keyboard users move directly to the main content.
-2. I added `aria-current="page"` to identify the active navigation link.
-3. I improved the image alt text to provide a description for screen-reader users.
-4. I maintained semantic HTML elements and a logical heading structure to make the page easier to navigate.
+### Project Overview
 
-### Gestalt Principles
+For Milestone 3, I improved my personal portfolio website to make it more accessible, visually organized, and easier to navigate. My website includes three pages: Home, Projects, and About. I used HTML, CSS, and JavaScript to create a responsive website with a consistent pink and purple color palette.
 
-**Proximity:** I grouped my Education and Career goals into individual cards so visitors can easily understand the information.
+## 1. Accessibility Improvements
 
-**Similarity:** I used consistent card styling, navigation, fonts, and a pink and purple color palette to create a unified design across my portfolio.
-### Accessibility Improvements
+I made the following improvements to my website:
 
-1. I updated my text colors to improve readability against the pink, purple, and white backgrounds.
-2. I added visible keyboard focus indicators to make navigation easier for people who do not use a mouse.
-3. I styled my navigation links to clearly identify the current page.
-4. I added responsive layouts to improve accessibility on mobile phones, tablets, and desktop computers.
-5. I created form styles with clearly labeled input fields and visible error messages.
-6. ## Milestone 3: Accessibility and Visual Design
+1. I added skip navigation links to all three pages so keyboard users can move directly to the main content.
+2. I added `aria-current="page"` to identify the active navigation link on each page.
+3. I used semantic HTML elements, including `header`, `nav`, `main`, `section`, `article`, and `footer`, to organize my website.
+4. I improved the image alt text on my Home page to help screen-reader users understand the image.
+5. I updated my CSS colors to improve text readability against different backgrounds.
+6. I added visible keyboard focus indicators to make navigation easier without a mouse.
+7. I used responsive layouts to make my website accessible on mobile phones, tablets, and desktop computers.
+8. I added form labels and accessible error messages to my contact form.
 
-### Accessibility Improvements
+## 2. Gestalt Principles
 
-1. I added a skip navigation link so keyboard users can move directly to the main content.
-2. I added `aria-current="page"` to identify the active navigation link.
-3. I used proper labels for every contact form input so screen readers can identify each field.
-4. I added a fieldset and legend to group the contact information.
-5. I added JavaScript validation to display clear error messages when required fields are missing or incorrect.
-6. I used `aria-invalid` and `aria-live` to make form errors easier for screen-reader users to identify.
-7. I updated the CSS to improve text readability and provide visible keyboard focus indicators.
-8. I added responsive styling to make the website easier to use on phones, tablets, and desktop computers.
+I intentionally applied two Gestalt principles to improve my website's visual design.
 
-### Gestalt Principles
+**Proximity:** I grouped related information into sections and cards. For example, my Education and Career goals are displayed in separate cards, and my Projects page groups each project title with its description.
 
-**Proximity:** I grouped related information into sections and cards so visitors can easily understand which content belongs together.
+**Similarity:** I used matching pink and purple colors, fonts, borders, rounded corners, and navigation styles throughout all three pages. This helps my website look consistent and organized.
 
-**Similarity:** I used the same pink and purple color palette, fonts, navigation, rounded borders, and card styles throughout my website.
+## 3. Accessible Contact Form
 
-### Accessible Contact Form
+I added a contact form to my About page so visitors can enter their name, email address, and message.
 
-I added a contact form to my About page that includes fields for a full name, email address, and message. Each field has a visible label and an accessible error message. I also used a fieldset and legend to organize the form. JavaScript checks the information before showing a validation result. This form is a demonstration and does not send messages.
+Each input has a visible label, and I used a `fieldset` and `legend` to group the contact information.
 
-### Accessibility Testing
+I also added JavaScript validation that displays error messages when required information is missing or an email address is invalid. The form uses `aria-invalid` and `aria-live` to help screen-reader users identify errors.
 
-I will test all three pages using WAVE and check the text and background colors using the WebAIM Contrast Checker. I will document any additional errors and fixes after testing.
-7. I added reduced-motion support to respect users who prefer less animation.
-### Projects Page Accessibility Improvements
+The contact form currently demonstrates validation but does not send messages.
 
-1. I added a skip navigation link to help keyboard users access the main content without going through every navigation link.
-2. I added `aria-current="page"` to identify the Projects page as the active page.
-3. I used semantic HTML elements such as `main`, `section`, and `article` to organize the page.
-4. I added `aria-labelledby` to connect the Projects section with its heading.
-5. I improved the project descriptions to make the content more meaningful and easier to understand.
-6. I used responsive CSS Grid to organize the project cards on different screen sizes.
+## 4. Responsive Design
 
-### Gestalt Principles Used
+I used CSS Grid and media queries to make my website responsive.
 
-**Proximity:** I placed each project title and description inside the same card to show that they belong together.
+- Desktop: Project cards display in three columns.
+- Tablet: Project cards display in two columns.
+- Mobile: Project cards display in one column.
 
-**Similarity:** I used matching pink backgrounds, purple borders, rounded corners, and consistent spacing across all project cards.
+I also adjusted spacing, navigation, and font sizes to improve readability on smaller screens.
 
-### Gestalt Principles
+## 5. Accessibility Testing
 
-**Proximity:** I grouped related content into cards with consistent spacing so visitors can easily understand which information belongs together.
+**WAVE Accessibility Checker**
 
-**Similarity:** I used matching colors, fonts, borders, buttons, and card designs throughout my website to create a consistent visual experience.
+Testing is pending for the following pages:
+
+- Home (`index.html`)
+- Projects (`project.html`)
+- About (`about.html`)
+
+After running WAVE, I will document any errors found and the changes made to correct them.
+
+**WebAIM Contrast Checker**
+
+I updated my color palette to improve readability. I will verify that normal text meets the WCAG AA minimum contrast ratio of 4.5:1 and large text meets 3:1.
+
+## 6. Conclusion
+
+Milestone 3 helped me understand the importance of accessibility and intentional visual design. I learned how semantic HTML, accessible forms, responsive layouts, and Gestalt principles can improve the experience for people visiting my website.
+
+My goal is to continue improving my web development skills and creating websites that are visually appealing and accessible to different users.
