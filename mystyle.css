@@ -456,3 +456,92 @@ main {
     }
 
 }
+
+/* Milestone 4 JavaScript Interactions */
+
+#toggleProjects,
+#contactForm button,
+#factButton {
+    background-color: #7e22ce;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    margin: 16px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#toggleProjects:hover,
+#contactForm button:hover,
+#factButton:hover {
+    background-color: #be185d;
+}
+
+/* Keyboard accessibility */
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+    outline: 3px solid #581c87;
+    outline-offset: 4px;
+}
+
+/* Show and hide projects */
+
+[hidden] {
+    display: none !important;
+}
+
+/* Contact form styling */
+
+.contact-section {
+    background-color: #fdf2f8;
+    color: #581c87;
+    padding: 24px;
+    border-radius: 16px;
+    margin: 24px 0;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#contactForm label {
+    font-weight: bold;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 2px solid #9333ea;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.error-message {
+    color: #b91c1c;
+    font-size: 14px;
+    margin: 0 0 8px;
+}
+
+#contactForm [aria-invalid="true"] {
+    border: 2px solid #b91c1c;
+}
+
+#formSuccess {
+    color: #166534;
+    font-weight: bold;
+}
+
+#factDisplay {
+    background-color: #f3e8ff;
+    color: #581c87;
+    padding: 16px;
+    border-radius: 8px;
+}

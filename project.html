@@ -8,7 +8,9 @@
           content="width=device-width, initial-scale=1.0">
 
     <title>Projects - Armani McCoy Portfolio</title>
+
     <link rel="stylesheet" href="mystyle.css">
+    <script src="milestone4.js" defer></script>
 </head>
 
 <body>
@@ -21,14 +23,12 @@
 
         <h1>My Projects</h1>
 
-
-<nav aria-label="Main navigation">
-    <a href="index.html">Home</a> |
-    <a href="project.html">Projects</a> |
-    <a href="about.html">About</a> |
-    <a href="interactive.html">Interactive</a>
-</nav>
-
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a> |
+            <a href="project.html">Projects</a> |
+            <a href="about.html">About</a> |
+            <a href="interactive.html">Interactive</a>
+        </nav>
 
     </header>
 
@@ -49,7 +49,18 @@
                 to develop.
             </p>
 
-            <div class="projects-grid">
+            <!-- JavaScript interaction button -->
+
+            <button type="button"
+                    id="toggleProjects"
+                    aria-expanded="true"
+                    aria-controls="projectList">
+                Hide Projects
+            </button>
+
+            <!-- Dynamic project section -->
+
+            <div id="projectList" class="projects-grid">
 
                 <article class="card">
 

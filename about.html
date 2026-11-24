@@ -8,7 +8,9 @@
           content="width=device-width, initial-scale=1.0">
 
     <title>About Me - Armani McCoy Portfolio</title>
+
     <link rel="stylesheet" href="mystyle.css">
+    <script src="milestone4.js" defer></script>
 </head>
 
 <body>
@@ -21,14 +23,12 @@
 
     <h1>About Me</h1>
 
-
-<nav aria-label="Main navigation">
-    <a href="index.html">Home</a> |
-    <a href="project.html">Projects</a> |
-    <a href="about.html">About</a> |
-    <a href="interactive.html">Interactive</a>
-</nav>
-
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a> |
+        <a href="project.html">Projects</a> |
+        <a href="about.html">About</a> |
+        <a href="interactive.html">Interactive</a>
+    </nav>
 
 </header>
 
@@ -61,8 +61,8 @@
         <ul>
             <li>
                 Email:
-                <a href="mailto:armanimccoy69@gmail.com">
-                    armanimccoy69@gmail.com
+                <a href="mailto:your-email@example.com">
+                    Contact Email
                 </a>
             </li>
 
@@ -76,7 +76,7 @@
 
     </section>
 
-    <section class="content-box">
+    <section class="content-box contact-section">
 
         <h2>Contact Form</h2>
 
@@ -85,7 +85,7 @@
             All fields are required.
         </p>
 
-        <form id="contact-form"
+        <form id="contactForm"
               class="contact-form"
               novalidate>
 
@@ -95,20 +95,20 @@
 
                 <div class="form-group">
 
-                    <label for="full-name">
+                    <label for="contactName">
                         Full Name
                     </label>
 
                     <input
                         type="text"
-                        id="full-name"
+                        id="contactName"
                         name="full-name"
                         autocomplete="name"
                         required
-                        aria-describedby="name-error"
+                        aria-describedby="nameError"
                     >
 
-                    <p id="name-error"
+                    <p id="nameError"
                        class="error-message"
                        aria-live="polite"></p>
 
@@ -116,20 +116,20 @@
 
                 <div class="form-group">
 
-                    <label for="email">
+                    <label for="contactEmail">
                         Email Address
                     </label>
 
                     <input
                         type="email"
-                        id="email"
+                        id="contactEmail"
                         name="email"
                         autocomplete="email"
                         required
-                        aria-describedby="email-error"
+                        aria-describedby="emailError"
                     >
 
-                    <p id="email-error"
+                    <p id="emailError"
                        class="error-message"
                        aria-live="polite"></p>
 
@@ -137,19 +137,39 @@
 
                 <div class="form-group">
 
-                    <label for="message">
+                    <label for="contactSubject">
+                        Subject
+                    </label>
+
+                    <input
+                        type="text"
+                        id="contactSubject"
+                        name="subject"
+                        required
+                        aria-describedby="subjectError"
+                    >
+
+                    <p id="subjectError"
+                       class="error-message"
+                       aria-live="polite"></p>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="contactMessage">
                         Your Message
                     </label>
 
                     <textarea
-                        id="message"
+                        id="contactMessage"
                         name="message"
                         rows="5"
                         required
-                        aria-describedby="message-error"
+                        aria-describedby="messageError"
                     ></textarea>
 
-                    <p id="message-error"
+                    <p id="messageError"
                        class="error-message"
                        aria-live="polite"></p>
 
@@ -162,7 +182,7 @@
                 Submit Message
             </button>
 
-            <p id="form-status"
+            <p id="formSuccess"
                class="form-status"
                role="status"
                aria-live="polite"></p>
@@ -177,7 +197,6 @@
     <p>&copy; 2026 Armani McCoy</p>
 </footer>
 
-<script src="contact.js"></script>
-
 </body>
 </html>
+
