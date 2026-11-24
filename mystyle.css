@@ -1,4 +1,10 @@
-/* Applies to every element */
+
+/* =====================
+   GLOBAL STYLES
+   ===================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -7,221 +13,446 @@ html {
     scroll-behavior: smooth;
 }
 
-body body {
+body {
     margin: 0;
-    padding: 0;
-    font-family: "DM Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to bottom, #fff1f7, #f7efff);
+    color: #342044;
     line-height: 1.6;
-    color: #352044;
-    background: #fff5fc;
+    overflow-wrap: break-word;
 }
+
+/* TYPE SELECTORS */
 
 h1, h2, h3 {
-    font-family: "Poppins", sans-serif;
-}
-/* Header and navigation */
-#header {
-    background: linear-gradient(135deg, #7b2cbf, #c77dff);
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
+    font-family: "Playfair Display", serif;
+    line-height: 1.3;
 }
 
-#header h1 {
-    margin: 0 0 15px;
-    overflow-wrap: anywhere;
+p {
+    margin-top: 8px;
 }
+
+img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+}
+
+a {
+    color: #602080;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =====================
+   KEYBOARD ACCESSIBILITY
+   ===================== */
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    z-index: 1000;
+    background: white;
+    color: #342044;
+    padding: 12px 16px;
+    border: 2px solid #602080;
+    border-radius: 8px;
+}
+
+.skip-link:focus {
+    top: 8px;
+}
+
+:focus-visible {
+    outline: 3px solid #342044;
+    outline-offset: 4px;
+}
+
+/* =====================
+   HEADER AND FOOTER
+   ===================== */
+
+#header {
+    background: linear-gradient(135deg, #ff8ac6, #c77dff);
+    color: #171020;
+    text-align: center;
+    padding: 40px 24px;
+    border-bottom: 8px solid #72efdd;
+}
+
+#footer {
+    background: linear-gradient(135deg, #c77dff, #ff8ac6);
+    color: #171020;
+    text-align: center;
+    padding: 24px;
+    border-top: 8px solid #72efdd;
+}
+
+/* =====================
+   NAVIGATION
+   ===================== */
 
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 12px 25px;
+    gap: 8px;
+    margin-top: 16px;
 }
 
 nav a {
-    color: rgb(76, 6, 44);
+    display: inline-block;
     text-decoration: none;
-    font-weight: bold;
-    padding: 5px;
+    color: #171020;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 24px;
 }
 
 nav a:hover,
-nav a:focus {
-    color: #ffe0f3;
+nav a:focus-visible {
+    background-color: #ffffff;
+    color: #342044;
+}
+
+nav a[aria-current="page"] {
+    background-color: #ffffff;
+    color: #342044;
     text-decoration: underline;
 }
 
-/* Main page layout */
+/* =====================
+   MAIN CONTENT
+   ===================== */
+
 main {
-    width: 100%;
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 20px;
 }
 
-/* Sections */
 .content-box {
-    min-width: 0;
-    padding: 20px;
-    background-color: white;
-    border: 1px solid #e6b8f5;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(91, 33, 120, 0.08);
+    background-color: #ffffff;
+    margin: 32px;
+    padding: 24px;
+    border: 3px solid #b34785;
+    border-radius: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
 }
 
 .content-box h2 {
-    margin-top: 0;
-    color: #7626a8;
+    margin-bottom: 16px;
 }
 
-.content-box p,
-.content-box li {
-    overflow-wrap: anywhere;
-}
-
-/* About section */
-#about {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 20px;
-    align-items: center;
-}
-
-.about-text {
-    min-width: 0;
-}
-
-.welcome-image {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Goals cards */
-.goals-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 15px;
-}
+/* =====================
+   GESTALT: SIMILARITY
+   ===================== */
 
 .card {
-    min-width: 0;
-    padding: 18px;
-    background-color: #fff0fa;
-    border: 1px solid #e6b8f5;
-    border-radius: 10px;
+    background-color: #fff7fc;
+    padding: 24px;
+    border: 2px solid #8750b5;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
 }
 
 .card h3 {
+    color: #51236b;
     margin-top: 0;
-    margin-bottom: 8px;
-    color: #8a2be2;
 }
 
-/* Hobbies list */
-#hobbies ul {
-    padding-left: 25px;
+.card p {
     margin-bottom: 0;
+}
+
+/* =====================
+   GESTALT: PROXIMITY
+   ===================== */
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+#goals .card {
+    width: 100%;
+}
+
+/* =====================
+   HOBBIES
+   ===================== */
+
+#hobbies ul {
+    padding-left: 24px;
+    margin-top: 16px;
 }
 
 #hobbies li {
     margin-bottom: 8px;
 }
 
-/* Footer */
-#footer {
-    background-color: #6a1b9a;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 10px;
+/* =====================
+   IMAGE STYLING
+   ===================== */
+
+#about img,
+.portfolio-image {
+    margin-top: 24px;
+    border: 4px solid #479a8e;
 }
 
-#footer p {
-    margin: 0;
+/* =====================
+   ACCESSIBLE CONTACT FORM
+   ===================== */
+
+.contact-form {
+    max-width: 700px;
+    margin: 24px auto;
 }
 
-@media (min-width: 640px) {
-  .card-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.contact-form fieldset {
+    border: 2px solid #8750b5;
+    border-radius: 16px;
+    padding: 24px;
+    min-width: 0;
 }
 
-@media (min-width: 1024px) {
-  .card-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+.contact-form legend {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #342044;
+    padding: 0 8px;
 }
 
-    #about {
-        grid-column: 1 / -1;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
-    }
-
-    #goals,
-    #hobbies {
-        height: 100%;
-    }
-
-    .goals-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    #footer {
-        margin-top: 15px;
-    }
-
-
-/* Desktop: 1200px and wider */
-@media (min-width: 1200px) {
-    main {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 25px;
-        padding: 30px 20px;
-    }
-
-    #about {
-        grid-column: 1 / -1;
-        grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
-    }
-
-    #goals,
-    #hobbies {
-        grid-column: auto;
-    }
-
-    .goals-grid {
-        grid-template-columns: minmax(0, 1fr);
-    }
+.form-group {
+    margin-bottom: 24px;
 }
 
-/* Small phones */
-@media (max-width: 360px) {
-    main {
-        padding: 10px;
-        gap: 12px;
-    }
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #342044;
+}
+
+.form-group input,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #8750b5;
+    border-radius: 8px;
+    font: inherit;
+    color: #342044;
+    background-color: #ffffff;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+    outline: 3px solid #342044;
+    outline-offset: 2px;
+}
+
+.form-group input[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+    border: 3px solid #a11232;
+}
+
+.error-message {
+    color: #a11232;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.form-status {
+    margin-top: 16px;
+    font-weight: 600;
+}
+
+.form-status.error {
+    color: #a11232;
+}
+
+.form-status.success {
+    color: #245d39;
+}
+
+.submit-button {
+    background-color: #602080;
+    color: #ffffff;
+    border: 2px solid #602080;
+    padding: 12px 24px;
+    border-radius: 24px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #44135e;
+}
+
+.submit-button:focus-visible {
+    outline: 3px solid #342044;
+    outline-offset: 4px;
+}
+
+/* =====================
+   LARGE TABLET: 1024px
+   ===================== */
+
+@media (max-width: 1024px) {
 
     .content-box {
-        padding: 14px;
+        margin: 24px;
+    }
+
+}
+
+/* =====================
+   TABLET: 768px
+   ===================== */
+
+@media (max-width: 768px) {
+
+    .content-box {
+        margin: 24px 16px;
+    }
+
+    .goals-grid {
+        grid-template-columns: 1fr;
     }
 
     #header {
-        padding: 20px 10px;
+        padding: 32px 16px;
+    }
+
+}
+
+/* =====================
+   MOBILE: 640px
+   ===================== */
+
+@media (max-width: 640px) {
+
+    .content-box {
+        margin: 16px;
+        padding: 16px;
     }
 
     nav {
-        gap: 8px 12px;
+        gap: 8px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+    }
+
+    .contact-form fieldset {
+        padding: 16px;
+    }
+
+}
+
+/* =====================
+   SMALL MOBILE: 320px+
+   ===================== */
+
+@media (max-width: 480px) {
+
+    #header {
+        padding: 24px 16px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .content-box {
+        margin: 16px 8px;
+        padding: 16px;
     }
 
     .card {
-        padding: 12px;
+        padding: 16px;
     }
+
+    nav a {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+}
+
+/* =====================
+   REDUCED MOTION
+   ===================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+}
+
+/* =====================
+   PROJECTS PAGE LAYOUT
+   ===================== */
+
+/* Gestalt Principle: Proximity */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+/* Gestalt Principle: Similarity */
+
+.projects-grid .card {
+    background-color: #fff7fc;
+    border: 2px solid #8750b5;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 640px) {
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
 }
