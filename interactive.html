@@ -1,50 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Student Dashboard</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Personalized Student Success Dashboard</title>
+
     <link rel="stylesheet" href="interactive.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
 
+<a class="skip-link" href="#main-content">
+    Skip to main content
+</a>
+
 <header>
-  <h1>Interactive Student Dashboard</h1>
-  <p>Stay motivated and organized!</p>
+
+    <h1>Student Success Dashboard</h1>
+
+    <p>Your space to learn, grow, and succeed!</p>
+
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a> |
+        <a href="project.html">Projects</a> |
+        <a href="about.html">About</a> |
+        <a href="interactive.html"
+           aria-current="page">Interactive</a>
+    </nav>
+
 </header>
 
-<main>
-  <section>
-    <h2>Motivation Counter</h2>
-    <p id="message">You have clicked the button 0 times!</p>
-    <button id="changeButton">Click Me!</button>
-  </section>
+<main id="main-content">
 
-  <section>
-    <h2>Customize Your Color</h2>
+    <!-- Feature 1: Motivation Counter -->
 
-    <label for="colorInput">Choose a color:</label>
-    <input type="color" id="colorInput" value="#9333ea">
+    <section>
 
-    <div id="colorBox">
-      Watch my color change!
-    </div>
-  </section>
+        <h2>Daily Motivation</h2>
 
-  <section>
-    <h2>My Study To-Do List</h2>
+        <p>Every small step brings you closer to your goals!</p>
 
-    <label for="taskInput">Enter a study task:</label>
-    <input type="text" id="taskInput"
-           placeholder="Enter a task">
+        <p id="message" role="status">
+            You have clicked the button 0 times!
+        </p>
 
-    <button id="addButton">Add Task</button>
+        <button type="button" id="changeButton">
+            Boost My Motivation
+        </button>
 
-    <ul id="taskList"></ul>
-  </section>
+    </section>
+
+
+    <!-- Feature 2: Live Style Customizer -->
+
+    <section>
+
+        <h2>Design Your Study Space</h2>
+
+        <p>
+            Personalize your dashboard by choosing
+            your favorite theme and text size.
+            Watch your changes happen in real time!
+        </p>
+
+        <div id="dashboardPreview" class="theme-pink">
+
+            <h3 id="welcomeMessage">
+                Welcome, Student!
+            </h3>
+
+            <p>Your journey to success starts here.</p>
+
+            <div class="dashboard-grid">
+
+                <article class="dashboard-card">
+                    <h4>Study Goals</h4>
+                    <p>Stay organized and keep learning.</p>
+                </article>
+
+                <article class="dashboard-card">
+                    <h4>Stay Focused</h4>
+                    <p>Believe in your progress.</p>
+                </article>
+
+            </div>
+
+        </div>
+
+        <div class="customizer">
+
+            <label for="studentName">
+                Personalize your welcome message:
+            </label>
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter a nickname"
+                maxlength="30"
+            >
+
+            <label for="themeSelect">
+                Choose your aesthetic:
+            </label>
+
+            <select id="themeSelect">
+
+                <option value="pink">
+                    Pretty in Pink
+                </option>
+
+                <option value="purple">
+                    Lavender Dreams
+                </option>
+
+                <option value="blue">
+                    Ocean Blue
+                </option>
+
+                <option value="green">
+                    Sage Green
+                </option>
+
+                <option value="dark">
+                    Midnight Mode
+                </option>
+
+            </select>
+
+            <label for="fontSlider">
+                Welcome message text size:
+                <output id="fontValue"
+                        for="fontSlider">24px</output>
+            </label>
+
+            <input
+                type="range"
+                id="fontSlider"
+                min="16"
+                max="36"
+                value="24"
+            >
+
+            <button type="button" id="resetDashboard">
+                Reset My Dashboard
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Feature 3: Study To-Do List -->
+
+    <section>
+
+        <h2>My Study To-Do List</h2>
+
+        <p>Organize your assignments and study goals.</p>
+
+        <label for="taskInput">
+            Enter a study task:
+        </label>
+
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="Example: Complete JavaScript homework"
+        >
+
+        <button type="button" id="addButton">
+            Add Task
+        </button>
+
+        <ul id="taskList"></ul>
+
+    </section>
+
 </main>
 
 <footer>
-  <p>JavaScript Interactivity Project</p>
+
+    <p>Student Success Dashboard | JavaScript Project</p>
+
+    <p>&copy; 2026 Armani McCoy</p>
+
 </footer>
+
+</body>
+</html>
+
