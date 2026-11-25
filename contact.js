@@ -1,4 +1,3 @@
-
 const form = document.getElementById("contact-form");
 const statusMessage = document.getElementById("form-status");
 

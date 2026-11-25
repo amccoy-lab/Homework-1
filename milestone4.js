@@ -1,4 +1,3 @@
-
 // Feature 1: Show and hide projects
 
 const toggleProjects = document.querySelector("#toggleProjects");

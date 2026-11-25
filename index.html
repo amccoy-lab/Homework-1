@@ -1,117 +1,195 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Armani McCoy Portfolio</title>
-    <link rel="stylesheet" href="mystyle.css">
-    <script src="milestone4.js" defer></script>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Personalized Student Success Dashboard</title>
+
+    <link rel="stylesheet" href="interactive.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <a class="skip-link" href="#main-content">
-        Skip to main content
-    </a>
+<a class="skip-link" href="#main-content">
+    Skip to main content
+</a>
 
-    <header id="header">
-        <h1>Welcome to My Portfolio</h1>
+<header>
 
-      
+    <h1>Student Success Dashboard</h1>
 
-<nav aria-label="Main navigation">
-    <a href="index.html">Home</a> |
-    <a href="project.html">Projects</a> |
-    <a href="about.html">About</a> |
-    <a href="interactive.html">Interactive</a>
-</nav>
+    <p>Your space to learn, grow, and succeed!</p>
 
-    </header>
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a> |
+        <a href="project.html">Projects</a> |
+        <a href="about.html">About</a> |
+        <a href="interactive.html"
+           aria-current="page">Interactive</a>
+    </nav>
 
-    <main id="main-content">
+</header>
 
-        <section id="about" class="content-box">
-            <h2>About Me</h2>
+<main id="main-content">
 
-            <p>
-                Hello, my name is Armani McCoy. I am from
-                Philadelphia, and I am currently attending
-                college while working toward my associate
-                degree in Information Technology.
+    <!-- Feature 1: Motivation Counter -->
 
-                I enjoy learning new technology skills
-                and improving my web development knowledge.
-            </p>
+    <section>
 
-            <img
-                src="welcome 2.jpg"
-                alt="Image representing my interest in Information Technology"
-                class="portfolio-image"
-            >
-        </section>
+        <h2>Daily Motivation</h2>
 
-        <section id="goals" class="content-box">
-            <h2>My Goals</h2>
+        <p>Every small step brings you closer to your goals!</p>
 
-            <div class="goals-grid">
+        <p id="message" role="status">
+            You have clicked the button 0 times!
+        </p>
 
-                <article class="card">
-                    <h3>Education</h3>
-                    <p>
-                        My goal is to complete my associate
-                        degree and continue building skills
-                        in web development, technology,
-                        and digital media.
-                    </p>
+        <button type="button" id="changeButton">
+            Boost My Motivation
+        </button>
+
+    </section>
+
+
+    <!-- Feature 2: Live Style Customizer -->
+
+    <section>
+
+        <h2>Design Your Study Space</h2>
+
+        <p>
+            Personalize your dashboard by choosing
+            your favorite theme and text size.
+            Watch your changes happen in real time!
+        </p>
+
+        <div id="dashboardPreview" class="theme-pink">
+
+            <h3 id="welcomeMessage">
+                Welcome, Student!
+            </h3>
+
+            <p>Your journey to success starts here.</p>
+
+            <div class="dashboard-grid">
+
+                <article class="dashboard-card">
+                    <h4>Study Goals</h4>
+                    <p>Stay organized and keep learning.</p>
                 </article>
 
-                <article class="card">
-                    <h3>Career</h3>
-                    <p>
-                        I want to build a successful career
-                        where I can use technology to solve
-                        problems and continue learning new
-                        programming skills.
-                    </p>
+                <article class="dashboard-card">
+                    <h4>Stay Focused</h4>
+                    <p>Believe in your progress.</p>
                 </article>
 
             </div>
-        </section>
 
-        <section id="hobbies" class="content-box">
-            <h2>My Hobbies</h2>
+        </div>
 
-            <ul>
-                <li>Watching sports</li>
-                <li>Learning web development</li>
-                <li>Listening to music</li>
-                <li>Spending time with family and friends</li>
-            </ul>
-        </section>
-<section id="fun-facts" class="content-box">
+        <div class="customizer">
 
-    <h2>Random Fun Fact</h2>
+            <label for="studentName">
+                Personalize your welcome message:
+            </label>
 
-    <p>
-        Discover something new by clicking the button below!
-    </p>
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter a nickname"
+                maxlength="30"
+            >
 
-    <button type="button" id="factButton">
-        Get a Fun Fact
-    </button>
+            <label for="themeSelect">
+                Choose your aesthetic:
+            </label>
 
-    <p id="factDisplay" role="status" aria-live="polite">
-        Click the button to discover a fun fact!
-    </p>
+            <select id="themeSelect">
 
-</section>
-    </main>
+                <option value="pink">
+                    Pretty in Pink
+                </option>
 
-    <footer id="footer">
-        <p>&copy; 2026 Armani McCoy</p>
-    </footer>
+                <option value="purple">
+                    Lavender Dreams
+                </option>
+
+                <option value="blue">
+                    Ocean Blue
+                </option>
+
+                <option value="green">
+                    Sage Green
+                </option>
+
+                <option value="dark">
+                    Midnight Mode
+                </option>
+
+            </select>
+
+            <label for="fontSlider">
+                Welcome message text size:
+                <output id="fontValue"
+                        for="fontSlider">24px</output>
+            </label>
+
+            <input
+                type="range"
+                id="fontSlider"
+                min="16"
+                max="36"
+                value="24"
+            >
+
+            <button type="button" id="resetDashboard">
+                Reset My Dashboard
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Feature 3: Study To-Do List -->
+
+    <section>
+
+        <h2>My Study To-Do List</h2>
+
+        <p>Organize your assignments and study goals.</p>
+
+        <label for="taskInput">
+            Enter a study task:
+        </label>
+
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="Example: Complete JavaScript homework"
+        >
+
+        <button type="button" id="addButton">
+            Add Task
+        </button>
+
+        <ul id="taskList"></ul>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>Student Success Dashboard | JavaScript Project</p>
+
+    <p>&copy; 2026 Armani McCoy</p>
+
+</footer>
 
 </body>
 </html>

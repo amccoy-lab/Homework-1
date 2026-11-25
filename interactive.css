@@ -1,115 +1,454 @@
+/* =====================
+   GOOGLE FONTS
+   ===================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* =====================
+   GLOBAL STYLES
+   ===================== */
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #fdf2f8;
-  color: #4a235a;
-  margin: 0;
-  line-height: 1.6;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to bottom, #fff1f7, #f7efff);
+    color: #4a235a;
+    margin: 0;
+    line-height: 1.6;
 }
 
-header {
-  background: linear-gradient(135deg, #9333ea, #be185d);
-  color: white;
-  text-align: center;
-  padding: 32px 16px;
-}
-
-main {
-  max-width: 800px;
-  margin: 24px auto;
-  padding: 16px;
-}
-
-section {
-  background: white;
-  padding: 24px;
-  margin-bottom: 24px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px #00000015;
+h1, h2, h3, h4 {
+    font-family: "Playfair Display", serif;
+    line-height: 1.3;
 }
 
 h2 {
-  color: #7e22ce;
+    color: #7e22ce;
+    margin-top: 0;
 }
 
+/* =====================
+   HEADER AND NAVIGATION
+   ===================== */
+
+header {
+    background: linear-gradient(135deg, #9333ea, #be185d);
+    color: white;
+    text-align: center;
+    padding: 40px 24px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 24px;
+}
+
+nav a:hover,
+nav a:focus-visible,
+nav a[aria-current="page"] {
+    background: white;
+    color: #581c87;
+}
+
+/* =====================
+   MAIN CONTENT
+   ===================== */
+
+main {
+    max-width: 1000px;
+    margin: 24px auto;
+    padding: 16px;
+}
+
+section {
+    background: white;
+    padding: 32px;
+    margin-bottom: 24px;
+    border: 2px solid #e9d5ff;
+    border-radius: 24px;
+    box-shadow: 0 4px 16px #00000015;
+}
+
+/* =====================
+   BUTTONS
+   ===================== */
+
 button {
-  background: #9333ea;
-  color: white;
-  border: none;
-  padding: 12px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
+    background: #7e22ce;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 24px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: background-color 0.2s;
 }
 
 button:hover {
-  background: #7e22ce;
+    background: #be185d;
 }
 
-input[type="text"] {
-  padding: 12px;
-  border: 2px solid #c084fc;
-  border-radius: 8px;
-  font-size: 16px;
-  max-width: 100%;
+/* =====================
+   MOTIVATION COUNTER
+   ===================== */
+
+#message {
+    background: #f3e8ff;
+    color: #581c87;
+    padding: 16px;
+    border-left: 5px solid #9333ea;
+    border-radius: 8px;
+    font-weight: 600;
 }
 
-input[type="color"] {
-  cursor: pointer;
+/* =====================
+   LIVE DASHBOARD PREVIEW
+   ===================== */
+
+#dashboardPreview {
+    padding: 32px;
+    margin: 24px 0;
+    border: 3px solid var(--theme-border);
+    border-radius: 24px;
+
+    background: linear-gradient(
+        135deg,
+        var(--theme-start),
+        var(--theme-end)
+    );
+
+    color: var(--theme-text);
+
+    transition:
+        background-color 0.3s,
+        color 0.3s,
+        border-color 0.3s;
+
+    overflow-wrap: anywhere;
 }
 
-#colorBox {
-  background-color: #9333ea;
-  color: white;
-  padding: 24px;
-  margin-top: 16px;
-  border-radius: 8px;
-  text-align: center;
+#welcomeMessage {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+/* =====================
+   THEME 1: PRETTY IN PINK
+   ===================== */
+
+.theme-pink {
+    --theme-start: #fce7f3;
+    --theme-end: #f5d0fe;
+    --theme-text: #831843;
+    --theme-border: #db2777;
+    --theme-card: #fff1f7;
+}
+
+/* =====================
+   THEME 2: LAVENDER DREAMS
+   ===================== */
+
+.theme-purple {
+    --theme-start: #ede9fe;
+    --theme-end: #ddd6fe;
+    --theme-text: #581c87;
+    --theme-border: #9333ea;
+    --theme-card: #f5f3ff;
+}
+
+/* =====================
+   THEME 3: OCEAN BLUE
+   ===================== */
+
+.theme-blue {
+    --theme-start: #dbeafe;
+    --theme-end: #cffafe;
+    --theme-text: #1e3a8a;
+    --theme-border: #2563eb;
+    --theme-card: #eff6ff;
+}
+
+/* =====================
+   THEME 4: SAGE GREEN
+   ===================== */
+
+.theme-green {
+    --theme-start: #dcfce7;
+    --theme-end: #ccfbf1;
+    --theme-text: #14532d;
+    --theme-border: #15803d;
+    --theme-card: #f0fdf4;
+}
+
+/* =====================
+   THEME 5: MIDNIGHT MODE
+   ===================== */
+
+.theme-dark {
+    --theme-start: #1e1b2e;
+    --theme-end: #44305e;
+    --theme-text: #ffffff;
+    --theme-border: #a78bfa;
+    --theme-card: #352747;
+}
+
+/* =====================
+   DASHBOARD CARDS
+   ===================== */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.dashboard-card {
+    background: var(--theme-card);
+    border: 1px solid var(--theme-border);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.dashboard-card h4 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.dashboard-card p {
+    margin-bottom: 0;
+}
+
+/* =====================
+   CUSTOMIZATION CONTROLS
+   ===================== */
+
+.customizer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    background: #faf5ff;
+    border: 2px solid #d8b4fe;
+    border-radius: 16px;
+}
+
+label {
+    font-weight: 600;
+    color: #581c87;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #a855f7;
+    border-radius: 8px;
+    font: inherit;
+    color: #4a235a;
+    background: white;
+}
+
+select {
+    cursor: pointer;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: #9333ea;
+    cursor: pointer;
+}
+
+#fontValue {
+    color: #7e22ce;
+    font-weight: 700;
+}
+
+#resetDashboard {
+    background: #be185d;
+}
+
+#resetDashboard:hover {
+    background: #9d174d;
+}
+
+/* =====================
+   STUDY TO-DO LIST
+   ===================== */
+
+#taskInput {
+    margin-top: 8px;
+    margin-bottom: 16px;
 }
 
 #taskList {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 #taskList li {
-  background: #f3e8ff;
-  padding: 12px;
-  margin-top: 8px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-  overflow-wrap: anywhere;
+    background: #f3e8ff;
+    padding: 16px;
+    margin-top: 8px;
+    border: 1px solid #d8b4fe;
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 16px;
+    overflow-wrap: anywhere;
 }
 
 .delete-button {
-  background: #be185d;
+    background: #be185d;
+    flex-shrink: 0;
 }
+
+.delete-button:hover {
+    background: #9d174d;
+}
+
+/* =====================
+   KEYBOARD ACCESSIBILITY
+   ===================== */
+
+:focus-visible {
+    outline: 3px solid #581c87;
+    outline-offset: 4px;
+}
+
+header :focus-visible,
+footer :focus-visible {
+    outline-color: white;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    z-index: 1000;
+    background: white;
+    color: #581c87;
+    padding: 12px 16px;
+    border: 2px solid #581c87;
+    border-radius: 8px;
+}
+
+.skip-link:focus {
+    top: 8px;
+}
+
+/* =====================
+   FOOTER
+   ===================== */
 
 footer {
-  text-align: center;
-  background: #581c87;
-  color: white;
-  padding: 16px;
+    text-align: center;
+    background: linear-gradient(135deg, #581c87, #9d174d);
+    color: white;
+    padding: 24px;
 }
 
+/* =====================
+   TABLET RESPONSIVENESS
+   ===================== */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 24px;
+    }
+
+    #dashboardPreview {
+        padding: 24px;
+    }
+
+}
+
+/* =====================
+   MOBILE RESPONSIVENESS
+   ===================== */
+
 @media (max-width: 600px) {
-  section {
-    padding: 16px;
-  }
 
-  input[type="text"] {
-    width: 100%;
-    margin-bottom: 8px;
-  }
+    main {
+        padding: 8px;
+    }
 
-  #addButton {
-    width: 100%;
-  }
+    section {
+        padding: 16px;
+    }
+
+    header {
+        padding: 24px 16px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #dashboardPreview,
+    .customizer {
+        padding: 16px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #taskList li {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+}
+
+/* =====================
+   REDUCED MOTION
+   ===================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+        transition: none !important;
+    }
+
 }
