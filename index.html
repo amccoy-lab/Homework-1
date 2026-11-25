@@ -1,195 +1,131 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Personalized Student Success Dashboard</title>
+    <title>Welcome - Armani McCoy</title>
 
-    <link rel="stylesheet" href="interactive.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="milestone4.js" defer></script>
 </head>
 
 <body>
 
-<a class="skip-link" href="#main-content">
-    Skip to main content
-</a>
+    <header id="header">
 
-<header>
+        <h1>Welcome to My Portfolio</h1>
 
-    <h1>Student Success Dashboard</h1>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a> |
+            <a href="project.html">Projects</a> |
+            <a href="about.html">About</a> |
+            <a href="interactive.html">Interactive Dashboard</a>
+        </nav>
 
-    <p>Your space to learn, grow, and succeed!</p>
+    </header>
 
-    <nav aria-label="Main navigation">
-        <a href="index.html">Home</a> |
-        <a href="project.html">Projects</a> |
-        <a href="about.html">About</a> |
-        <a href="interactive.html"
-           aria-current="page">Interactive</a>
-    </nav>
+    <main>
 
-</header>
+        <section class="content-box">
 
-<main id="main-content">
+            <h2>Welcome!</h2>
 
-    <!-- Feature 1: Motivation Counter -->
+            <img src="welcome 2.jpg"
+                 alt="Photo of IT student"
+                 width="300">
 
-    <section>
+            <p>
+                Hello, my name is Armani McCoy.
+                I am from Philadelphia and currently
+                pursuing an associate degree in
+                Information Technology.
+            </p>
 
-        <h2>Daily Motivation</h2>
+            <p>
+                Welcome to my portfolio website, where
+                I share my projects, academic goals,
+                and progress in web development.
+            </p>
 
-        <p>Every small step brings you closer to your goals!</p>
+        </section>
 
-        <p id="message" role="status">
-            You have clicked the button 0 times!
-        </p>
+        <section class="content-box">
 
-        <button type="button" id="changeButton">
-            Boost My Motivation
-        </button>
+            <h2>My Goals</h2>
 
-    </section>
+            <div class="goals-grid">
 
+                <article class="content-box">
 
-    <!-- Feature 2: Live Style Customizer -->
+                    <h3>Academic Goals</h3>
 
-    <section>
+                    <ul>
+                        <li>Complete my associate degree.</li>
+                        <li>Improve my web development skills.</li>
+                        <li>Learn more about Information Technology.</li>
+                    </ul>
 
-        <h2>Design Your Study Space</h2>
-
-        <p>
-            Personalize your dashboard by choosing
-            your favorite theme and text size.
-            Watch your changes happen in real time!
-        </p>
-
-        <div id="dashboardPreview" class="theme-pink">
-
-            <h3 id="welcomeMessage">
-                Welcome, Student!
-            </h3>
-
-            <p>Your journey to success starts here.</p>
-
-            <div class="dashboard-grid">
-
-                <article class="dashboard-card">
-                    <h4>Study Goals</h4>
-                    <p>Stay organized and keep learning.</p>
                 </article>
 
-                <article class="dashboard-card">
-                    <h4>Stay Focused</h4>
-                    <p>Believe in your progress.</p>
+                <article class="content-box">
+
+                    <h3>Career Goals</h3>
+
+                    <ul>
+                        <li>Build a successful career in technology.</li>
+                        <li>Gain hands-on experience.</li>
+                        <li>Continue learning new technical skills.</li>
+                    </ul>
+
                 </article>
 
             </div>
 
-        </div>
+        </section>
 
-        <div class="customizer">
+        <section class="content-box">
 
-            <label for="studentName">
-                Personalize your welcome message:
-            </label>
+            <h2>My Interests and Hobbies</h2>
 
-            <input
-                type="text"
-                id="studentName"
-                placeholder="Enter a nickname"
-                maxlength="30"
-            >
+            <ul>
+                <li>Technology</li>
+                <li>Web development</li>
+                <li>Creative writing</li>
+                <li>Learning new skills</li>
+            </ul>
 
-            <label for="themeSelect">
-                Choose your aesthetic:
-            </label>
+        </section>
 
-            <select id="themeSelect">
+        <section class="content-box">
 
-                <option value="pink">
-                    Pretty in Pink
-                </option>
+            <h2>Random Fun Fact</h2>
 
-                <option value="purple">
-                    Lavender Dreams
-                </option>
+            <p>
+                Click the button below to discover
+                an interesting random fact!
+            </p>
 
-                <option value="blue">
-                    Ocean Blue
-                </option>
-
-                <option value="green">
-                    Sage Green
-                </option>
-
-                <option value="dark">
-                    Midnight Mode
-                </option>
-
-            </select>
-
-            <label for="fontSlider">
-                Welcome message text size:
-                <output id="fontValue"
-                        for="fontSlider">24px</output>
-            </label>
-
-            <input
-                type="range"
-                id="fontSlider"
-                min="16"
-                max="36"
-                value="24"
-            >
-
-            <button type="button" id="resetDashboard">
-                Reset My Dashboard
+            <button type="button" id="factButton">
+                Get a Fun Fact
             </button>
 
-        </div>
+            <p id="factDisplay" role="status">
+                Your fun fact will appear here.
+            </p>
 
-    </section>
+        </section>
 
+    </main>
 
-    <!-- Feature 3: Study To-Do List -->
+    <footer id="footer">
 
-    <section>
+        <p>&copy; 2026 Armani McCoy</p>
 
-        <h2>My Study To-Do List</h2>
-
-        <p>Organize your assignments and study goals.</p>
-
-        <label for="taskInput">
-            Enter a study task:
-        </label>
-
-        <input
-            type="text"
-            id="taskInput"
-            placeholder="Example: Complete JavaScript homework"
-        >
-
-        <button type="button" id="addButton">
-            Add Task
-        </button>
-
-        <ul id="taskList"></ul>
-
-    </section>
-
-</main>
-
-<footer>
-
-    <p>Student Success Dashboard | JavaScript Project</p>
-
-    <p>&copy; 2026 Armani McCoy</p>
-
-</footer>
+    </footer>
 
 </body>
+
 </html>
